@@ -19,13 +19,6 @@ namespace Project2_Group4.Controllers
             _TaskContext = x;
         }
 
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
         public IActionResult Index()
         {
             return View();
@@ -41,27 +34,27 @@ namespace Project2_Group4.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-        [HttpGet]
-        public IActionResult Edit(int movieid)
-        {
-            ViewBag.Categories = _TaskContext.Categories.ToList();
-            var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
-            return View("MovieForm", form);
-        }
-        [HttpPost]
-        public IActionResult Edit(TaskModel response)
-        {
-            _TaskContext.Update(response);
-            _TaskContext.SaveChanges();
-            return RedirectToAction("Display");
-        }
-        [HttpGet]
-        public IActionResult Delete(int movieid)
-        {
-            var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
-            //ViewBag.Categories = daContext.Categories.ToList();
-            return View(form);
-        }
+        //[HttpGet]
+        //public IActionResult Edit(int movieid)
+        //{
+        //    ViewBag.Categories = _TaskContext.Categories.ToList();
+        //    var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
+        //    return View("MovieForm", form);
+        //}
+        //[HttpPost]
+        //public IActionResult Edit(TaskModel response)
+        //{
+        //    _TaskContext.Update(response);
+        //    _TaskContext.SaveChanges();
+        //    return RedirectToAction("Display");
+        //}
+        //[HttpGet]
+        //public IActionResult Delete(int movieid)
+        //{
+        //    var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
+        //    //ViewBag.Categories = daContext.Categories.ToList();
+        //    return View(form);
+        //}
         //[HttpPost]
         //public IActionResult Delete(TaskModel ar)
         //{
