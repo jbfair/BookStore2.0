@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Project2_Group4.Models;
 using System;
@@ -11,18 +11,12 @@ namespace Project2_Group4.Controllers
 {
     public class HomeController : Controller
     {
+        //private blahContext DbContext { get; set; }
 
-        //private TaskDatabaseContext _TaskContext { get; set; }
-        //public HomeController(TaskDatabaseContext x)
-        //{
-        //    _TaskContext = x;
-        //}
-
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        private TaskDatabaseContext _TaskContext { get; set; }
+        public HomeController(TaskDatabaseContext x)
         {
-            _logger = logger;
+            _TaskContext = x;
         }
 
         public IActionResult Index()
@@ -40,10 +34,39 @@ namespace Project2_Group4.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
-
+        
         public IActionResult Quad()
         {
             return View();
         }
+        
+        //[HttpGet]
+        //public IActionResult Edit(int movieid)
+        //{
+        //    ViewBag.Categories = _TaskContext.Categories.ToList();
+        //    var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
+        //    return View("MovieForm", form);
+        //}
+        //[HttpPost]
+        //public IActionResult Edit(TaskModel response)
+        //{
+        //    _TaskContext.Update(response);
+        //    _TaskContext.SaveChanges();
+        //    return RedirectToAction("Display");
+        //}
+        //[HttpGet]
+        //public IActionResult Delete(int movieid)
+        //{
+        //    var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
+        //    //ViewBag.Categories = daContext.Categories.ToList();
+        //    return View(form);
+        //}
+        //[HttpPost]
+        //public IActionResult Delete(TaskModel ar)
+        //{
+        //    _TaskContext.Categories.Remove(ar);
+        //    _TaskContext.SaveChanges();
+        //    return RedirectToAction("Display");
+        //}
     }
 }
