@@ -44,30 +44,30 @@ namespace Project2_Group4.Controllers
         [HttpGet]
         public IActionResult Edit(int movieid)
         {
-            ViewBag.Categories = x.Categories.ToList();
-            var form = x.Responses.Single(x => x.MovieID == movieid);
+            ViewBag.Categories = _TaskContext.Categories.ToList();
+            var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
             return View("MovieForm", form);
         }
         [HttpPost]
         public IActionResult Edit(TaskModel response)
         {
-            x.Update(response);
-            x.SaveChanges();
+            _TaskContext.Update(response);
+            _TaskContext.SaveChanges();
             return RedirectToAction("Display");
         }
         [HttpGet]
         public IActionResult Delete(int movieid)
         {
-            var form = x.Responses.Single(x => x.MovieID == movieid);
+            var form = _TaskContext.Categories.Single(x => x.CategoryID == movieid);
             //ViewBag.Categories = daContext.Categories.ToList();
             return View(form);
         }
-        [HttpPost]
-        public IActionResult Delete(TaskModel ar)
-        {
-            x.Responses.Remove(ar);
-            x.SaveChanges();
-            return RedirectToAction("Display");
-        }
+        //[HttpPost]
+        //public IActionResult Delete(TaskModel ar)
+        //{
+        //    _TaskContext.Categories.Remove(ar);
+        //    _TaskContext.SaveChanges();
+        //    return RedirectToAction("Display");
+        //}
     }
 }
