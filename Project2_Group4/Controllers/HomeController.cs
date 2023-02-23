@@ -11,13 +11,13 @@ namespace Project2_Group4.Controllers
 {
     public class HomeController : Controller
     {
-        private blahContext DbContext { get; set; }
+        //private blahContext DbContext { get; set; }
 
-        //private TaskDatabaseContext _TaskContext { get; set; }
-        //public HomeController(TaskDatabaseContext x)
-        //{
-        //    _TaskContext = x;
-        //}
+        private TaskDatabaseContext _TaskContext { get; set; }
+        public HomeController(TaskDatabaseContext x)
+        {
+            _TaskContext = x;
+        }
 
         private readonly ILogger<HomeController> _logger;
 
@@ -44,29 +44,29 @@ namespace Project2_Group4.Controllers
         [HttpGet]
         public IActionResult Edit(int movieid)
         {
-            ViewBag.Categories = daContext.Categories.ToList();
-            var form = daContext.Responses.Single(x => x.MovieID == movieid);
+            ViewBag.Categories = x.Categories.ToList();
+            var form = x.Responses.Single(x => x.MovieID == movieid);
             return View("MovieForm", form);
         }
         [HttpPost]
-        public IActionResult Edit(ApplicationResponse response)
+        public IActionResult Edit(TaskModel response)
         {
-            daContext.Update(response);
-            daContext.SaveChanges();
+            x.Update(response);
+            x.SaveChanges();
             return RedirectToAction("Display");
         }
         [HttpGet]
         public IActionResult Delete(int movieid)
         {
-            var form = daContext.Responses.Single(x => x.MovieID == movieid);
+            var form = x.Responses.Single(x => x.MovieID == movieid);
             //ViewBag.Categories = daContext.Categories.ToList();
             return View(form);
         }
         [HttpPost]
-        public IActionResult Delete(ApplicationResponse ar)
+        public IActionResult Delete(TaskModel ar)
         {
-            daContext.Responses.Remove(ar);
-            daContext.SaveChanges();
+            x.Responses.Remove(ar);
+            x.SaveChanges();
             return RedirectToAction("Display");
         }
     }
