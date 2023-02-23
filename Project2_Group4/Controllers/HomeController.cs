@@ -34,6 +34,12 @@ namespace Project2_Group4.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+        
+        public IActionResult Quad()
+        {
+            return View();
+        }
+        
         //[HttpGet]
         //public IActionResult Edit(int movieid)
         //{
