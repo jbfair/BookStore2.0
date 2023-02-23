@@ -11,6 +11,13 @@ namespace Project2_Group4.Controllers
 {
     public class HomeController : Controller
     {
+
+        //private TaskDatabaseContext _TaskContext { get; set; }
+        //public HomeController(TaskDatabaseContext x)
+        //{
+        //    _TaskContext = x;
+        //}
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
