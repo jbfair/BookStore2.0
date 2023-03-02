@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lvmUdc3KQpEK9zmk9SP5Gp6LebvA48sJB6GGW3k1fbWOxdyZvwr+hrzlKtnuMBobk6IIDz5QBi7tvv1lErIYog==",
+  "dgSpecHash": "GPfLJpbeLQI0DkcEV9XrstkPKLlpyIr8h8gWxuOvmImcb2btVF2Xhmrdg2mI1iGOKcL/DetnwAuo1cNKWdKd+g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jbfai\\code\\IS413\\BookStore\\BookStore.csproj",
+  "projectFilePath": "C:\\Users\\jbfai\\Source\\Repos\\BookStore2.0\\BookStore\\BookStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jbfai\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\jbfai\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",

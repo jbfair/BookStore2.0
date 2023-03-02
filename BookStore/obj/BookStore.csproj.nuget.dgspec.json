@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jbfai\\code\\IS413\\BookStore\\BookStore.csproj": {}
+    "C:\\Users\\jbfai\\Source\\Repos\\BookStore2.0\\BookStore\\BookStore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jbfai\\code\\IS413\\BookStore\\BookStore.csproj": {
+    "C:\\Users\\jbfai\\Source\\Repos\\BookStore2.0\\BookStore\\BookStore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jbfai\\code\\IS413\\BookStore\\BookStore.csproj",
+        "projectUniqueName": "C:\\Users\\jbfai\\Source\\Repos\\BookStore2.0\\BookStore\\BookStore.csproj",
         "projectName": "BookStore",
-        "projectPath": "C:\\Users\\jbfai\\code\\IS413\\BookStore\\BookStore.csproj",
+        "projectPath": "C:\\Users\\jbfai\\Source\\Repos\\BookStore2.0\\BookStore\\BookStore.csproj",
         "packagesPath": "C:\\Users\\jbfai\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jbfai\\code\\IS413\\BookStore\\obj\\",
+        "outputPath": "C:\\Users\\jbfai\\Source\\Repos\\BookStore2.0\\BookStore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jbfai\\AppData\\Roaming\\NuGet\\NuGet.Config",
