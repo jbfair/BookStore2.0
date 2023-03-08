@@ -168,3 +168,4 @@ C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookS
 C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookStore.dll
 C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
 C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookStore.genruntimeconfig.cache
+C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Summary.cshtml.g.cs
