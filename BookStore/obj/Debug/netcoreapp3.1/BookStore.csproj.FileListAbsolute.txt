@@ -169,3 +169,8 @@ C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookS
 C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookStore.pdb
 C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\BookStore.genruntimeconfig.cache
 C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Summary.cshtml.g.cs
+C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\Categories\Default.cshtml.g.cs
+C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Pages\Cart.cshtml.g.cs
+C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Pages\_CartLayout.cshtml.g.cs
+C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewImports.cshtml.g.cs
+C:\Users\jbfai\Source\Repos\BookStore2.0\BookStore\obj\Debug\netcoreapp3.1\Razor\Pages\_ViewStart.cshtml.g.cs

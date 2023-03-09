@@ -13,20 +13,23 @@ namespace BookStore.Controllers
         private IBookStoreRepo repo;
 
         public HomeController(IBookStoreRepo temp) => repo = temp;
-        public IActionResult Index(int pgNum)
+        public IActionResult Index(string bookCategory, int pgNum)
         {
             int pgSize = 10;
 
             var x = new BooksViewModel
             {
                 Books = repo.Books
-                .OrderBy(p => p.Title)
+                .Where(b => b.Category == bookCategory || bookCategory == null)
+                .OrderBy(b => b.Title)
                 .Skip((pgNum - 1) * pgSize)
                 .Take(pgSize),
 
                 PageInfo = new PageInfo
                 {
-                    TotalBooks = repo.Books.Count(),
+                    TotalBooks = (bookCategory == null 
+                    ? repo.Books.Count() 
+                    : repo.Books.Where(x => x.Category == bookCategory).Count()),
                     BooksPerPg = pgSize,
                     CurrentPg = pgNum
                 }
