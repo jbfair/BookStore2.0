@@ -4,15 +4,16 @@
 
 <div class="d-grid gap-2">
     @*ADDITIONAL BOOSTRAP: Made the home button green when on the home page (i.e no category is selected)*@
-    <a asp-controller="Home" asp-action="Index" asp-route-bookCategory="" asp-route-pgNum="1" 
-        class="btn @(ViewBag.SelectedCategory == null ? "btn-success" : "btn-outline-success")">Home</a>
-   
+    <a asp-controller="Home" asp-action="Index" asp-route-bookCategory="" asp-route-pgNum="1"
+       class="btn @(ViewBag.SelectedCategory == null ? "btn-success" : "btn-outline-success")">Home</a>
+
 
 
     @foreach (string c in Model)
     {
-        <a asp-controller="Home" asp-action="Index" asp-route-bookCategory="@c" asp-route-pgNum="1" 
+        <a asp-controller="Home" asp-action="Index" asp-route-bookCategory="@c" asp-route-pgNum="1"
            class="btn @(ViewBag.SelectedCategory == c ? "btn-primary" : "btn-outline-secondary")">@c</a>
-        
+
     }
+    
 </div>

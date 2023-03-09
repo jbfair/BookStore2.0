@@ -4,8 +4,19 @@
 
 
 
-<h1>Books</h1>
 
+<div class="jumbotron">
+    <h1 class="display-3">Welcome to the Book Store!</h1>
+    
+    <p class="lead">
+        Here are some of our best selling books.
+    </p>
+    <hr class="my-2">
+    <p>
+        Read and approved by Spencer Hilton!
+    </p>
+
+</div>
 @foreach (Book b in Model.Books)
 {
     <partial name="Summary" model="b" />
